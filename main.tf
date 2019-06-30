@@ -3,7 +3,7 @@ provider "fastly" {
 }
 
 resource "fastly_service_v1" "demo" {
-  name = "demo automagicize"
+  name = var.service_name
 
   domain {
     name    = var.domain
