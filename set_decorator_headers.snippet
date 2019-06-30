@@ -1,0 +1,3 @@
+set req.http.Fastly-GeoIP-CountryName = client.geo.country_name.ascii;
+set req.http.Fastly-GeoIP-City = client.geo.city;
+call detect_device;

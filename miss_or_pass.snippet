@@ -1,0 +1,5 @@
+sub miss_or_pass {
+  if (req.backend.is_origin) {
+    set bereq.http.host = ${var.backend};
+  }
+}
