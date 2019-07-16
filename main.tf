@@ -21,6 +21,7 @@ resource "fastly_service_v1" "demo" {
     port    = 80
     healthcheck = "keep alive"
     shield = "iad-va-us"
+    error_threshold = 5
   }
 
   healthcheck {
