@@ -22,6 +22,7 @@ resource "fastly_service_v1" "demo" {
     healthcheck = "keep alive"
     shield = "iad-va-us"
     error_threshold = 5
+    auto_loadbalance = false
   }
 
   healthcheck {
@@ -29,6 +30,7 @@ resource "fastly_service_v1" "demo" {
     host = var.backend
     path = "/healthcheck/check"
     check_interval = 285000
+    threshold = 1 
   }
 
   request_setting {
