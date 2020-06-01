@@ -20,7 +20,7 @@ resource "fastly_service_v1" "demo" {
     name    = "This backend configured automaigcally"
     port    = 80
     healthcheck = "keep alive"
-    shield = "iad-va-us"
+    shield = "dca-dc-us"
     error_threshold = 5
     auto_loadbalance = false
   }
